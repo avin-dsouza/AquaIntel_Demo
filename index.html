@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AquaIntel — Know Your Water</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <span>
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-4H7l5-8v4h4l-5 8z"/></svg>
+      </span>
+      AquaIntel
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#test">Test Water</a></li>
+      <li><a href="#data">Community Data</a></li>
+    </ul>
+    <a href="#test" class="btn-primary nav-cta">Test Now</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">AI-Powered Water Intelligence</div>
+        <h1>Know What's In<br/><em>Your Water</em></h1>
+        <p>Test your local water quality in minutes. Get instant safety analysis and contribute to a community map of water health across your region.</p>
+        <div>
+          <a href="#test" class="btn-primary">Start Testing</a>
+          <a href="#shop" class="btn-outline">Get a Kit</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="num" id="stat-tests">0</div>
+            <div class="lbl">Tests Run</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num" id="stat-areas">0</div>
+            <div class="lbl">Areas Mapped</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num" id="stat-safe">—</div>
+            <div class="lbl">Avg Safety</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-orb">
+          <svg viewBox="0 0 80 80"><path d="M40 5 C25 5 10 18 10 35 C10 52 20 68 40 75 C60 68 70 52 70 35 C70 18 55 5 40 5Z" opacity=".9"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="section-header">
+          <div class="section-tag">Who We Are</div>
+          <h2 class="section-title">Democratizing Water Quality Intelligence</h2>
+          <p class="section-sub">AquaIntel empowers communities to test, understand, and share local water quality data — because clean water is a right, not a privilege.</p>
+        </div>
+        <p>Contaminated water affects millions of people who don't know the risk. AquaIntel provides affordable test kits and an AI-powered platform that turns your results into actionable insights — telling you if your water is safe to drink, cook with, or use for agriculture.</p>
+        <p>Every test you submit becomes part of a growing community database. Over time, AquaIntel builds a hyper-local picture of water quality that you can't find anywhere else — revealing patterns, tracking changes, and alerting communities to emerging risks.</p>
+      </div>
+      <div class="about-cards">
+        <div class="about-card">
+          <div class="icon" style="background:var(--teal-light)">🧪</div>
+          <h4>Simple Testing</h4>
+          <p>Test in minutes with our consumer-grade kits. No lab needed.</p>
+        </div>
+        <div class="about-card">
+          <div class="icon" style="background:var(--blue-light)">🤖</div>
+          <h4>AI Analysis</h4>
+          <p>Claude AI interprets your results and explains safety in plain English.</p>
+        </div>
+        <div class="about-card">
+          <div class="icon" style="background:var(--amber-light)">🗺️</div>
+          <h4>Community Map</h4>
+          <p>Your data adds to a shared picture of water quality in your region.</p>
+        </div>
+        <div class="about-card">
+          <div class="icon" style="background:var(--green-light)">🌾</div>
+          <h4>Ag &amp; Drinking</h4>
+          <p>Get separate safety ratings for drinking water and agricultural use.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <section id="shop">
+    <div class="section-header shop-header">
+      <div class="section-tag">Test Kits</div>
+      <h2 class="section-title">Everything You Need to Test</h2>
+      <p class="section-sub">Professional-grade sensors and strips, designed for field use. No chemistry background required.</p>
+    </div>
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-img" style="background:#E1F5EE">💧</div>
+        <div class="product-body">
+          <div class="product-tag" style="background:var(--teal-light);color:var(--teal-dark)">TDS</div>
+          <h3>Digital TDS Meter</h3>
+          <p>Measures total dissolved solids in ppm. Instant reading, waterproof, auto-temperature compensation.</p>
+          <div class="product-footer">
+            <span class="price">₹799</span>
+            <button class="btn-add" onclick="addToCart('TDS Meter','₹799')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img" style="background:#E6F1FB">⚗️</div>
+        <div class="product-body">
+          <div class="product-tag" style="background:var(--blue-light);color:#185FA5">pH</div>
+          <h3>Digital pH Meter</h3>
+          <p>Lab-accuracy pH sensor with ATC. Calibrate with included buffer solutions. 0.01 pH resolution.</p>
+          <div class="product-footer">
+            <span class="price">₹1,299</span>
+            <button class="btn-add" onclick="addToCart('pH Meter','₹1,299')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img" style="background:#EAF3DE">🌊</div>
+        <div class="product-body">
+          <div class="product-tag" style="background:var(--green-light);color:var(--green)">DO</div>
+          <h3>Dissolved Oxygen Sensor</h3>
+          <p>Optical DO probe with membrane cap. Measures O₂ in mg/L for aquatic health assessment.</p>
+          <div class="product-footer">
+            <span class="price">₹2,499</span>
+            <button class="btn-add" onclick="addToCart('DO Sensor','₹2,499')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img" style="background:var(--amber-light)">📋</div>
+        <div class="product-body">
+          <div class="product-tag" style="background:var(--amber-light);color:#7a4e0a">Hardness</div>
+          <h3>Hardness Test Strips</h3>
+          <p>50-strip pack. Color-match card for quick total hardness from 0–500 ppm (mg/L CaCO₃).</p>
+          <div class="product-footer">
+            <span class="price">₹349</span>
+            <button class="btn-add" onclick="addToCart('Hardness Test Strips','₹349')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card product-card--featured">
+        <div class="product-img" style="background:linear-gradient(135deg,#E1F5EE,#E6F1FB)">🎯</div>
+        <div class="product-body">
+          <div class="product-tag" style="background:var(--teal);color:white">Bundle</div>
+          <h3>AquaIntel Complete Kit</h3>
+          <p>All 4 instruments in a carry case. Includes calibration solutions, test strips, and QR guide card.</p>
+          <div class="product-footer">
+            <span class="price">₹4,499</span>
+            <button class="btn-add btn-add--dark" onclick="addToCart('Complete Kit','₹4,499')">Best Value</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TEST FORM -->
+  <section id="test">
+    <div class="form-container">
+      <div class="section-header" style="text-align:center">
+        <div class="section-tag">Water Test</div>
+        <h2 class="section-title">Submit Your Test Results</h2>
+        <p class="section-sub form-sub">Enter your readings and get an instant AI safety analysis. Your data helps the whole community.</p>
+      </div>
+
+      <div class="form-card">
+
+        <div class="form-section-title form-section-title--first">📍 Location &amp; Source</div>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="postcode">Area Postcode / PIN Code *</label>
+            <input type="text" id="postcode" placeholder="e.g. 416001" maxlength="10"/>
+          </div>
+          <div class="form-group">
+            <label for="source">Water Source *</label>
+            <select id="source">
+              <option value="">Select source...</option>
+              <option value="municipal_tap">Municipal Tap / Piped Water</option>
+              <option value="borewell">Borewell / Tubewell</option>
+              <option value="open_well">Open Well</option>
+              <option value="river">River / Stream</option>
+              <option value="lake">Lake / Pond</option>
+              <option value="rainwater">Rainwater</option>
+              <option value="tanker">Water Tanker</option>
+              <option value="spring">Natural Spring</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-section-title">🧪 Measurement Readings</div>
+        <div class="form-grid">
+          <div class="form-group">
+            <label>TDS — Total Dissolved Solids (ppm)</label>
+            <div class="range-row">
+              <input type="range" id="tds" min="0" max="2000" value="200" step="5" oninput="updateRange('tds','tds-val')"/>
+              <span class="range-val" id="tds-val">200</span>
+            </div>
+            <div class="input-hint">Safe drinking: &lt;500 ppm &nbsp;|&nbsp; WHO limit: 1000 ppm</div>
+          </div>
+          <div class="form-group">
+            <label>pH Level</label>
+            <div class="range-row">
+              <input type="range" id="ph" min="0" max="14" value="7.0" step="0.1" oninput="updateRange('ph','ph-val',1)"/>
+              <span class="range-val" id="ph-val">7.0</span>
+            </div>
+            <div class="input-hint">Safe: 6.5–8.5 &nbsp;|&nbsp; Ideal: ~7</div>
+          </div>
+          <div class="form-group">
+            <label>Hardness (mg/L as CaCO₃)</label>
+            <div class="range-row">
+              <input type="range" id="hardness" min="0" max="600" value="120" step="5" oninput="updateRange('hardness','hard-val')"/>
+              <span class="range-val" id="hard-val">120</span>
+            </div>
+            <div class="input-hint">Soft: &lt;60 &nbsp;|&nbsp; Hard: 120–180 &nbsp;|&nbsp; Very hard: &gt;180</div>
+          </div>
+          <div class="form-group">
+            <label>Dissolved Oxygen — DO (mg/L)</label>
+            <div class="range-row">
+              <input type="range" id="do" min="0" max="20" value="7.0" step="0.1" oninput="updateRange('do','do-val',1)"/>
+              <span class="range-val" id="do-val">7.0</span>
+            </div>
+            <div class="input-hint">Healthy aquatic: &gt;6 mg/L</div>
+          </div>
+        </div>
+
+        <div class="form-section-title">📝 Optional Notes</div>
+        <div class="form-group" style="margin-top:0">
+          <label for="notes">Observation Notes</label>
+          <input type="text" id="notes" placeholder="e.g. Water had slight odour, taken from 30ft depth, after rain..."/>
+        </div>
+
+        <button class="submit-btn" onclick="analyzeWater()">🔬 Analyze Water Quality</button>
+
+        <!-- RESULT OUTPUT -->
+        <div id="result-section">
+          <div id="result-card" class="result-card">
+            <div class="result-header">
+              <div id="result-icon" class="result-icon"></div>
+              <div>
+                <div id="result-title" class="result-title"></div>
+                <div id="result-sub" class="result-sub"></div>
+              </div>
+            </div>
+            <div id="result-badges" class="result-badges"></div>
+            <div id="result-detail" class="result-detail"></div>
+            <div id="ai-analysis">
+              <strong class="ai-label">AI Analysis</strong>
+              <span id="ai-text">
+                <span class="loading-dots"><span></span><span></span><span></span></span>
+                Getting AI analysis...
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY DATA -->
+  <section id="data">
+    <div class="data-inner">
+      <div class="section-header">
+        <div class="section-tag">Community Data</div>
+        <h2 class="section-title">Water Quality Reports Near You</h2>
+        <p class="section-sub">All test submissions from the community. Search by postcode to find water quality data in your area.</p>
+      </div>
+
+      <div id="data-stats" class="data-stats">
+        <div class="stat-card"><div class="stat-num" id="d-total">0</div><div class="stat-lbl">Total Tests</div></div>
+        <div class="stat-card"><div class="stat-num" id="d-safe">0</div><div class="stat-lbl">Safe for Drinking</div></div>
+        <div class="stat-card"><div class="stat-num" id="d-ag">0</div><div class="stat-lbl">Safe for Agri</div></div>
+        <div class="stat-card"><div class="stat-num" id="d-avg-tds">—</div><div class="stat-lbl">Avg TDS (ppm)</div></div>
+      </div>
+
+      <div class="data-controls">
+        <input type="text" id="search-pin" placeholder="Search by postcode..." class="search-input" oninput="renderTable()"/>
+        <select id="filter-source" onchange="renderTable()">
+          <option value="">All Sources</option>
+          <option value="municipal_tap">Municipal Tap</option>
+          <option value="borewell">Borewell</option>
+          <option value="open_well">Open Well</option>
+          <option value="river">River</option>
+          <option value="lake">Lake / Pond</option>
+          <option value="rainwater">Rainwater</option>
+          <option value="tanker">Tanker</option>
+          <option value="spring">Spring</option>
+        </select>
+        <select id="filter-status" onchange="renderTable()">
+          <option value="">All Statuses</option>
+          <option value="safe">Safe</option>
+          <option value="caution">Caution</option>
+          <option value="unsafe">Unsafe</option>
+        </select>
+        <button class="btn-clear" onclick="clearFilters()">Clear Filters</button>
+      </div>
+
+      <div class="data-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Postcode</th>
+              <th>Source</th>
+              <th>TDS (ppm)</th>
+              <th>pH</th>
+              <th>Hardness</th>
+              <th>DO</th>
+              <th>Drinking</th>
+              <th>Agri</th>
+            </tr>
+          </thead>
+          <tbody id="data-tbody"></tbody>
+        </table>
+        <div id="empty-state" class="empty-state">
+          <span class="emoji">🔍</span>
+          No records found. Try adjusting filters or be the first to test your area!
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <strong>AquaIntel</strong> — AI-Powered Water Quality Intelligence<br/>
+    <span class="footer-note">Data submitted by community members is for informational purposes only. Always consult certified labs for regulatory compliance.</span>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
