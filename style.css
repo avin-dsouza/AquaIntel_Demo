@@ -55,7 +55,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(247, 246, 242, 0.9);
+  background: rgba(230, 160, 221, 0.9);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   display: flex;
