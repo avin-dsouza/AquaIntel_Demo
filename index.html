@@ -19,7 +19,6 @@
     </div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#shop">Shop</a></li>
       <li><a href="#test">Test Water</a></li>
       <li><a href="#data">Community Data</a></li>
     </ul>
@@ -35,7 +34,6 @@
         <p>Test your local water quality in minutes. Get instant safety analysis and contribute to a community map of water health across your region.</p>
         <div>
           <a href="#test" class="btn-primary">Start Testing</a>
-          <a href="#shop" class="btn-outline">Get a Kit</a>
         </div>
         <div class="hero-stats">
           <div class="hero-stat">
@@ -98,184 +96,7 @@
   </section>
 
   <!-- SHOP -->
-  <section id="shop">
-    <div class="section-header shop-header">
-      <div class="section-tag">Test Kits</div>
-      <h2 class="section-title">Everything You Need to Test</h2>
-      <p class="section-sub">Professional-grade sensors and strips, designed for field use. No chemistry background required.</p>
-    </div>
-    <div class="products-grid">
-
-      <div class="product-card">
-        <div class="product-img" style="background:#E1F5EE">💧</div>
-        <div class="product-body">
-          <div class="product-tag" style="background:var(--teal-light);color:var(--teal-dark)">TDS</div>
-          <h3>Digital TDS Meter</h3>
-          <p>Measures total dissolved solids in ppm. Instant reading, waterproof, auto-temperature compensation.</p>
-          <div class="product-footer">
-            <span class="price">₹799</span>
-            <button class="btn-add" onclick="addToCart('TDS Meter','₹799')">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-img" style="background:#E6F1FB">⚗️</div>
-        <div class="product-body">
-          <div class="product-tag" style="background:var(--blue-light);color:#185FA5">pH</div>
-          <h3>Digital pH Meter</h3>
-          <p>Lab-accuracy pH sensor with ATC. Calibrate with included buffer solutions. 0.01 pH resolution.</p>
-          <div class="product-footer">
-            <span class="price">₹1,299</span>
-            <button class="btn-add" onclick="addToCart('pH Meter','₹1,299')">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-img" style="background:#EAF3DE">🌊</div>
-        <div class="product-body">
-          <div class="product-tag" style="background:var(--green-light);color:var(--green)">DO</div>
-          <h3>Dissolved Oxygen Sensor</h3>
-          <p>Optical DO probe with membrane cap. Measures O₂ in mg/L for aquatic health assessment.</p>
-          <div class="product-footer">
-            <span class="price">₹2,499</span>
-            <button class="btn-add" onclick="addToCart('DO Sensor','₹2,499')">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-img" style="background:var(--amber-light)">📋</div>
-        <div class="product-body">
-          <div class="product-tag" style="background:var(--amber-light);color:#7a4e0a">Hardness</div>
-          <h3>Hardness Test Strips</h3>
-          <p>50-strip pack. Color-match card for quick total hardness from 0–500 ppm (mg/L CaCO₃).</p>
-          <div class="product-footer">
-            <span class="price">₹349</span>
-            <button class="btn-add" onclick="addToCart('Hardness Test Strips','₹349')">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="product-card product-card--featured">
-        <div class="product-img" style="background:linear-gradient(135deg,#E1F5EE,#E6F1FB)">🎯</div>
-        <div class="product-body">
-          <div class="product-tag" style="background:var(--teal);color:white">Bundle</div>
-          <h3>AquaIntel Complete Kit</h3>
-          <p>All 4 instruments in a carry case. Includes calibration solutions, test strips, and QR guide card.</p>
-          <div class="product-footer">
-            <span class="price">₹4,499</span>
-            <button class="btn-add btn-add--dark" onclick="addToCart('Complete Kit','₹4,499')">Best Value</button>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- TEST FORM -->
-  <section id="test">
-    <div class="form-container">
-      <div class="section-header" style="text-align:center">
-        <div class="section-tag">Water Test</div>
-        <h2 class="section-title">Submit Your Test Results</h2>
-        <p class="section-sub form-sub">Enter your readings and get an instant AI safety analysis. Your data helps the whole community.</p>
-      </div>
-
-      <div class="form-card">
-
-        <div class="form-section-title form-section-title--first">📍 Location &amp; Source</div>
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="postcode">Area Postcode / PIN Code *</label>
-            <input type="text" id="postcode" placeholder="e.g. 416001" maxlength="10"/>
-          </div>
-          <div class="form-group">
-            <label for="source">Water Source *</label>
-            <select id="source">
-              <option value="">Select source...</option>
-              <option value="municipal_tap">Municipal Tap / Piped Water</option>
-              <option value="borewell">Borewell / Tubewell</option>
-              <option value="open_well">Open Well</option>
-              <option value="river">River / Stream</option>
-              <option value="lake">Lake / Pond</option>
-              <option value="rainwater">Rainwater</option>
-              <option value="tanker">Water Tanker</option>
-              <option value="spring">Natural Spring</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-section-title">🧪 Measurement Readings</div>
-        <div class="form-grid">
-          <div class="form-group">
-            <label>TDS — Total Dissolved Solids (ppm)</label>
-            <div class="range-row">
-              <input type="range" id="tds" min="0" max="2000" value="200" step="5" oninput="updateRange('tds','tds-val')"/>
-              <span class="range-val" id="tds-val">200</span>
-            </div>
-            <div class="input-hint">Safe drinking: &lt;500 ppm &nbsp;|&nbsp; WHO limit: 1000 ppm</div>
-          </div>
-          <div class="form-group">
-            <label>pH Level</label>
-            <div class="range-row">
-              <input type="range" id="ph" min="0" max="14" value="7.0" step="0.1" oninput="updateRange('ph','ph-val',1)"/>
-              <span class="range-val" id="ph-val">7.0</span>
-            </div>
-            <div class="input-hint">Safe: 6.5–8.5 &nbsp;|&nbsp; Ideal: ~7</div>
-          </div>
-          <div class="form-group">
-            <label>Hardness (mg/L as CaCO₃)</label>
-            <div class="range-row">
-              <input type="range" id="hardness" min="0" max="600" value="120" step="5" oninput="updateRange('hardness','hard-val')"/>
-              <span class="range-val" id="hard-val">120</span>
-            </div>
-            <div class="input-hint">Soft: &lt;60 &nbsp;|&nbsp; Hard: 120–180 &nbsp;|&nbsp; Very hard: &gt;180</div>
-          </div>
-          <div class="form-group">
-            <label>Dissolved Oxygen — DO (mg/L)</label>
-            <div class="range-row">
-              <input type="range" id="do" min="0" max="20" value="7.0" step="0.1" oninput="updateRange('do','do-val',1)"/>
-              <span class="range-val" id="do-val">7.0</span>
-            </div>
-            <div class="input-hint">Healthy aquatic: &gt;6 mg/L</div>
-          </div>
-        </div>
-
-        <div class="form-section-title">📝 Optional Notes</div>
-        <div class="form-group" style="margin-top:0">
-          <label for="notes">Observation Notes</label>
-          <input type="text" id="notes" placeholder="e.g. Water had slight odour, taken from 30ft depth, after rain..."/>
-        </div>
-
-        <button class="submit-btn" onclick="analyzeWater()">🔬 Analyze Water Quality</button>
-
-        <!-- RESULT OUTPUT -->
-        <div id="result-section">
-          <div id="result-card" class="result-card">
-            <div class="result-header">
-              <div id="result-icon" class="result-icon"></div>
-              <div>
-                <div id="result-title" class="result-title"></div>
-                <div id="result-sub" class="result-sub"></div>
-              </div>
-            </div>
-            <div id="result-badges" class="result-badges"></div>
-            <div id="result-detail" class="result-detail"></div>
-            <div id="ai-analysis">
-              <strong class="ai-label">AI Analysis</strong>
-              <span id="ai-text">
-                <span class="loading-dots"><span></span><span></span><span></span></span>
-                Getting AI analysis...
-              </span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
+  
 
   <!-- COMMUNITY DATA -->
   <section id="data">
